@@ -24,13 +24,13 @@ def create_url(url):
             db.commit()
             return code
 
-def get_url(id):
+def get_url(link_id):
     db = sqlite3.connect("database.db")
     cursor = db.cursor()
-    cursor.execute("SELECT url FROM urls WHERE id = ?", (id,))
+    cursor.execute("SELECT url FROM urls WHERE id = ?", (link_id,))
     data = cursor.fetchone()
     
-    if id:
+    if data:
         return data[0]
     else:
         return False
