@@ -56,4 +56,4 @@ def error_404(error):
     return render_template("error404.html"), 404  
 
 if __name__ == "__main__":
-    app.run(debug=True, port=6969)
+    app.run(host="0.0.0.0")
