@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>syurl</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/error404.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+    <script>
+        function updateYear() {
+            const copyrightElement = document.getElementById("copyright-year");
+            const currentYear = new Date().getFullYear();
+
+            copyrightElement.innerText = currentYear;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            updateYear();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbutton">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a href="/" class="logo">syurl</a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About Us</a></li>
+                <li><a href="/donate">Donate</a></li>
+                <li><a href="/github">Github</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="error-404">
+            <h1>Error 404</h1>
+            <p>Page not found</p>
+        </div>
+    </main>
+
+    <footer>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="/terms-of-service">Terms Of Service</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+            </ul>
+        </nav>
+        <h1 class="footer-copyright">&copy <span id="copyright-year"></span> syurl. All rights reserved.</h1>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>syurl</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about_us.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <script>
+        function updateYear() {
+            const copyrightElement = document.getElementById("copyright-year");
+            const currentYear = new Date().getFullYear();
+    
+            copyrightElement.innerText = currentYear;
+        }
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            updateYear();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbutton">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a href="/" class="logo">syurl</a>
+            <ul>
+                <li><a class="active" href="/">Home</a></li>
+                <li><a href="/about-us">About Us</a></li>
+                <li><a href="/donate">Donate</a></li>
+                <li><a href="/github">Github</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="devs_des1re">
+            <h1>Hey there! I am devs_des1re</h1>
+            <pre>I live in the UK, with my parents originating from India! 
+                I am active from 4pm-8pm due to school, but on the weekends I am mostly free. 
+                I enjoy cricket, football, and rugby. I take art as a hobby, and coding as a passion.</pre>
+
+            <hr>
+
+            <h2>Experiences</h2>
+            <pre>I have different experiences in different areas. 
+                I have completed a 3-year Python course worth 90 hours, each year receiving a certificate. 
+                I spent some time in Roblox development. 
+                I never finished a game sadly, so I moved a bit away from Roblox development. 
+                At least I have 1 year of experience within that area (I should really use those skills wisely xD).</pre>
+
+            <hr>
+
+            <h2>Socials</h2>
+            <pre>I have multiple social accounts. 
+                I am more into coding than on social media, so don't expect me to respond all the time.</pre>
+            <ul>
+                <li><a href="https://github.com/devs-des1re">Github</a></li>
+                <li><a href="https://www.youtube.com/@devs_des1re">Youtube</a></li>
+                <li><a href="https://discord.com/users/1096369071961952377">Discord</a></li>
+                <li><a href="https://www.tiktok.com/@abpganster">Tiktok</a></li>
+            </ul>
+
+            <hr>
+
+            <h2>My Message</h2>
+            <pre>You know... 
+                Those who make mistakes and reflect from them...
+                 Are the ones who will always succeed. 
+                 Never let mistakes blind you.</pre>
+
+            <hr>
+
+            <h2>Thank You</h2>
+            <pre>Thank you for taking your time and reading this. 
+                Have a wonderful day!</pre>
+        </div>
+    </main>
+
+    <footer>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="/terms-of-service">Terms Of Service</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+            </ul>
+        </nav>
+        <h1 class="footer-copyright">&copy <span id="copyright-year"></span> syurl. All rights reserved.</h1>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>syurl</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tos.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <script>
+        function updateYear() {
+            const copyrightElement = document.getElementById("copyright-year");
+            const currentYear = new Date().getFullYear();
+    
+            copyrightElement.innerText = currentYear;
+        }
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            updateYear();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbutton">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a href="/" class="logo">syurl</a>
+            <ul>
+                <li><a class="active" href="/">Home</a></li>
+                <li><a href="/about-us">About Us</a></li>
+                <li><a href="/donate">Donate</a></li>
+                <li><a href="/github">Github</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tos">
+            <h1>Terms of Service</h1>
+            <p><strong>Last Updated: 29/03/2025</strong></p>
+            
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing and using <strong>syurl</strong> ("the Website"), you agree to abide by these Terms of Service and all applicable laws. If you do not agree with these terms, please do not use the Website.</p>
+            
+            <h2>2. Use of the Website</h2>
+            <p>You agree to use the Website for lawful purposes only. You must not use the Website to shorten URLs that:</p>
+            <ul>
+                <li>Violate any laws or regulations.</li>
+                <li>Are harmful, fraudulent, or illegal.</li>
+                <li>Contain viruses or malicious software.</li>
+            </ul>
+
+            <h2>3. URL Content</h2>
+            <p>By using the Website, you confirm that you have the right to share and shorten the URLs you submit. We do not monitor or control the content of the URLs but reserve the right to remove links that violate our terms.</p>
+
+            <h2>4. Privacy</h2>
+            <p>Your use of the Website is also governed by our <a href="/privacy-policy">Privacy Policy</a>.</p>
+
+            <h2>5. Restrictions</h2>
+            <p>You may not:</p>
+            <ul>
+                <li>Use the Website for spamming or phishing purposes.</li>
+                <li>Impersonate another person or entity.</li>
+                <li>Engage in any activity that could harm the Website or other users.</li>
+            </ul>
+
+            <h2>6. Termination</h2>
+            <p>We reserve the right to suspend or terminate your access to the Website at any time without notice for any reason, including violation of these Terms.</p>
+
+            <h2>7. Limitation of Liability</h2>
+            <p>To the fullest extent permitted by law, <strong>syurl</strong> will not be liable for any indirect, incidental, special, or consequential damages arising from your use of the Website.</p>
+
+            <h2>8. Changes to the Terms</h2>
+            <p>We may update these Terms of Service at any time. We will notify users of significant changes via the Website or email. Continued use of the Website after such changes constitutes acceptance of the new Terms.</p>
+
+            <h2>9. Governing Law</h2>
+            <p>These Terms will be governed by and construed in accordance with the laws of England and Wales.</p>
+
+            <h2>Contact Us</h2>
+            <p class="last-tos">If you have any questions about these Terms of Service, please contact us via our GitHub repositories at <a href="/github">syurl</a>.</p>
+        </div>
+    </main>
+
+    <footer>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="/terms-of-service">Terms Of Service</a></li>
+                <li><a class="active" href="/privacy-policy">Privacy Policy</a></li>
+            </ul>
+        </nav>
+        <h1 class="footer-copyright">&copy <span id="copyright-year"></span> syurl. All rights reserved.</h1>
+    </footer>
+</body>
+</html>
