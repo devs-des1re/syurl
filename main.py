@@ -1,5 +1,9 @@
 from flask import Flask
 from flask import render_template, request, redirect, url_for
+
+import os
+from dotenv import load_dotenv
+
 import sqldb
 
 app = Flask(__name__)
@@ -56,4 +60,8 @@ def error_404(error):
     return render_template("error404.html"), 404  
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    load_dotenv()
+    host = os.getenv("HOST")
+    port = os.getenv("PORT")
+
+    app.run(host=host, port=port, debug=True)
