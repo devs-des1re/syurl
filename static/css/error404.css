@@ -83,6 +83,7 @@ html, body{
         justify-content: center;
         align-items: center;
         position: fixed;
+        z-index: 999;
         top: 60px;
         left: -100%;
         width: 100%;
