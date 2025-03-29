@@ -33,6 +33,6 @@ def get_url(id):
     if id:
         return data[0]
     else:
-        return None
+        return False
 
 db_init()

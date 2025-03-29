@@ -46,11 +46,11 @@ def tos():
 def privacy_policy():
     return render_template("privacy_policy.html")
 
-@app.route("/link/<string:id>")
-def short_link(id):
-    url = sqldb.get_url(id)
+@app.route("/link/<string:link_id>")
+def short_link(link_id):
+    url = sqldb.get_url(link_id)
 
-    if url != None:
+    if url:
         return render_template("short_link.html", link=url)
     else:
         return render_template("invalid_link.html")
