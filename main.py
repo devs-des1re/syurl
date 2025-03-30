@@ -25,6 +25,10 @@ def index():
 def about_us():
     return render_template("about_us.html")
 
+@app.route("/donate")
+def donate():
+    return render_template("donate.html")
+
 @app.route("/github")
 def github():
     return render_template("github.html")
