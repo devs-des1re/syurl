@@ -64,16 +64,9 @@ def api_shorten():
     long_link = request.args.get("long_link", None)
     if long_link != None:
         code = sqldb.create_url(long_link)
-        return {
-            "code": 201, ""
-            "link": f"https://syurl.net/link/{code}", 
-            "link_id": code
-        }
+        return {"code": 201, "link": f"https://syurl.net/link/{code}", "link_id": code}
     else:
-        return {
-            "code": 400, 
-            "error": "Link not provided"
-        }
+        return {"code": 400, "error": "Link not provided"}
 
 @app.errorhandler(404)
 def error_404(error):
